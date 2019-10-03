@@ -12,6 +12,7 @@ import javax.persistence.Id;
 
 import com.uuhnaut69.todo.model.enums.WorkStatus;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@ApiModel(description = "All details about work")
 public class Work extends AbstractEntity {
 
 	/**

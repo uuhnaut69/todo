@@ -5,7 +5,7 @@ import org.springframework.data.domain.Pageable;
 
 import com.uuhnaut69.todo.exception.AppException;
 import com.uuhnaut69.todo.model.entity.Work;
-import com.uuhnaut69.todo.model.payload.WorkReq;
+import com.uuhnaut69.todo.model.payload.WorkRequest;
 
 public interface WorkService {
 
@@ -13,9 +13,9 @@ public interface WorkService {
 
 	Work findById(Long id);
 
-	Work add(WorkReq req) throws AppException;
+	Work add(WorkRequest req) throws AppException;
 
-	Work edit(Long id, WorkReq req) throws AppException;
+	Work edit(Long id, WorkRequest req) throws AppException;
 
 	void delete(Long id) throws AppException;
 

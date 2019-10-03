@@ -9,14 +9,12 @@ import javax.validation.constraints.NotEmpty;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.uuhnaut69.todo.model.enums.WorkStatus;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-public class WorkReq {
+public class WorkRequest {
 
 	@NotEmpty(message = "Work name must be not empty")
 	private String workName;

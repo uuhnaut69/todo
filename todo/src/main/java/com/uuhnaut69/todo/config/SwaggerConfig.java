@@ -23,6 +23,6 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo buildApiInf() {
-		return new ApiInfoBuilder().title("RESTful API").description("List Rest API for Todo").version("1.0").build();
+		return new ApiInfoBuilder().title("RESTful API").description("Rest API for Todo App").version("1.0").build();
 	}
 }

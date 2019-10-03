@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="uuhnaut (generated)" id="1570074427434-1">
+        <createTable tableName="work">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_date" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ending_date" type="datetime(6)"/>
+            <column name="starting_date" type="datetime(6)"/>
+            <column name="work_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="work_status" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="uuhnaut (generated)" id="1570074427434-2">
+        <addUniqueConstraint columnNames="work_name" constraintName="UK_15x1xm9y8wpdfdcy45ex68496" tableName="work"/>
+    </changeSet>
+</databaseChangeLog>
