@@ -59,7 +59,7 @@ public class WorkController {
 	@PostMapping(path = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value = "Add a new work")
 	@ApiParam(value = "Work Request Object", required = true)
-	public ResponseEntity<Work> add(@RequestBody @Valid WorkRequest req) {
+	public ResponseEntity<Work> add(@RequestBody @Valid WorkRequest req) throws Exception {
 		Work work = workService.add(req);
 		return new ResponseEntity<Work>(work, HttpStatus.CREATED);
 	}
@@ -67,7 +67,7 @@ public class WorkController {
 	@PutMapping(path = "/{id}/edit", consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value = "Edit a work")
 	@ApiParam(value = "Work id & Work Request Object", required = true)
-	public ResponseEntity<Work> edit(@PathVariable Long id, @RequestBody @Valid WorkRequest req) {
+	public ResponseEntity<Work> edit(@PathVariable Long id, @RequestBody @Valid WorkRequest req) throws Exception {
 		Work work = workService.edit(id, req);
 		return new ResponseEntity<Work>(work, HttpStatus.OK);
 	}
@@ -75,7 +75,7 @@ public class WorkController {
 	@DeleteMapping("/{id}/delete")
 	@ApiOperation(value = "Delete a work")
 	@ApiParam(value = "Work id", required = true)
-	public ResponseEntity<String> delete(@PathVariable Long id) {
+	public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
 		workService.delete(id);
 		return new ResponseEntity<String>("Delete successfully", HttpStatus.OK);
 	}
