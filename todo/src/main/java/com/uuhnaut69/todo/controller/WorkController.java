@@ -75,8 +75,8 @@ public class WorkController {
 	@DeleteMapping("/{id}/delete")
 	@ApiOperation(value = "Delete a work")
 	@ApiParam(value = "Work id", required = true)
-	public ResponseEntity<String> delete(@PathVariable Long id) throws Exception {
+	public ResponseEntity<Object> delete(@PathVariable Long id) throws Exception {
 		workService.delete(id);
-		return new ResponseEntity<String>("Delete successfully", HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 }
