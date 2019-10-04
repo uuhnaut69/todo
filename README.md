@@ -1,11 +1,29 @@
-# [TODO] Notes
+# TODO API
 
-**Description**
+A REST API for a TODO List. 
 
-A REST API for a TODO list 
+# Introduction
+
+List supported features:
+
+  - Fetch work's details. 
+
+  - Fetch list of works with sorting and pagination.
+  
+  - Add work.
+  
+  - Edit work. 
+  
+  - Delete work.
+  
+  - Support caching (Caffeine).
+  
+  - Support db migration (Liquibase).
 
 
-**Technology stacks used in project:**
+# Technology stacks
+
+List technology stacks used in this project:
 
 - Spring Boot Framework 2.x
 
@@ -15,6 +33,6 @@ A REST API for a TODO list
 
 - Liquibase 3.4.1
 
-- Caffein 2.6.2
+- Caffeine 2.6.2
 
 - Maven 3.1.1
